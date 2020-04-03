@@ -36,7 +36,7 @@ app.put("/posts/:id", async (req, res) => {
 app.delete("/posts/:id", async (req, res) => {
     try {
         const { id } = req.params;
-        const deleteTodo = await pool.query("DELETE FROM posts WHERE id = $1", [
+        const deletePost = await pool.query("DELETE FROM posts WHERE id = $1", [
             id
         ]);
         res.json("Post was deleted");
